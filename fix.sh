@@ -1,4 +1,4 @@
 for i in 5 6 7;do
     id=slave-${i}
-    ssh $id "rm -rf /root/zookeeper-3.4.13/data/*"
+    ssh $id "sed -i '1,5d' /etc/hosts"
 done
