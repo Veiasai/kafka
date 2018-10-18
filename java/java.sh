@@ -7,5 +7,6 @@ export JRE_HOME=/root/jdk1.8.0_191/jre
 export CLASSPATH=.:\$JAVA_HOME/lib:\$JRE_HOME/lib:\$CLASSPATH
 export PATH=\$JAVA_HOME/bin:\$JRE_HOME/bin:\$PATH
 EOF
+exit
 eeooff
 done
