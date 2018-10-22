@@ -1,8 +1,9 @@
 dir=node_exporter-0.16.0.linux-amd64
-for i in 5 6 7;do
+for i in 1 2 3 4 8;do
     id=slave-${i}
-    ssh -t $id << eeooff
-cd $dir
-nohup ./node_exporter &
-eeooff
+    scp ./nohupnode.sh $id:/root/$dir
+    ssh $id << EOF
+    cd $dir
+    ./nohupnode.sh
+EOF
 done
