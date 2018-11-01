@@ -1,0 +1,12 @@
+version: '3'
+services:
+  manager:
+    image: hlebalbau/kafka-manager
+    environment: 
+      - APPLICATION_SECRET=veia
+      - ZK_HOSTS=ist-slave5:2181,ist-slave6:2181,s07:2181
+    ports:
+      - 9000:9000
+    volumes:
+      - /etc/hosts:/etc/hosts
+    command: -Dpidfile.path=/dev/null
